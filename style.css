@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+:root{
+    --bg_color: #FFF7F2;
+    --tittle_font: 'Mooli', sans-serif;
+    --text_font: 'Montserrat', sans-serif;
+    --text_color: #1C1203;
+    --button_color: #F8BCA3;
+    --light_pink: #FFECEA;
+    --card_bg: #FFCDC8;
+    --pink: #FFE4E1;
+    --white: #FFFEFE;
+}
+body{
+    background-color: var(--bg_color);
+    font-family: var(--text_font);
+    display: grid;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2.6em 6em 2.6em 4em;
+}
+/* .nav-area{
+    display: flex;
+    justify-content: center;
+    width: 40em;
+    height: 4.5em;
+    border-radius: 3em;
+    background-color: var(--white);
+    gap: 2em;
+} */
+.aaa{
+    display: none;
+}
