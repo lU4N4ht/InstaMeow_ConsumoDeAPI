@@ -4,11 +4,12 @@
     box-sizing: border-box;
 }
 body{
-    background-color: #FF6161;
+    background-color: #FFBEBE;
     overflow: hidden;
-    display: grid;
+    display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 15em;
 }
 img{
     width: 80em;
