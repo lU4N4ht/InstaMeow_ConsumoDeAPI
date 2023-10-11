@@ -6,11 +6,11 @@
 body{
     background-color: #FFBEBE;
     overflow: hidden;
-    display: flex;
+    display: grid;
     justify-content: center;
+    height: 90vh;
     align-items: center;
-    padding-top: 15em;
 }
 img{
-    width: 80em;
+    width: 70em;
 }
