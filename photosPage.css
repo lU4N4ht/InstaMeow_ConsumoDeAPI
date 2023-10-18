@@ -1,147 +1,197 @@
 * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      text-decoration: none;
-  }
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
 :root {
-      --bg_color: #FFF7F2;
-      --button_color: #F8BCA3;
-      --card_bg: #FFCDC8;
-      --light_pink: #FFECEA;
-      --pink: #FFE4E1;
-      --text_color: #3D2B1F;
-      --text_font: 'Montserrat', sans-serif;
-      --white: #FFFEFE;
-  }
+  --bg_color: #FFF7F2;
+  --button_color: #F8BCA3;
+  --card_bg: #FFCDC8;
+  --light_pink: #FFECEA;
+  --pink: #FFE4E1;
+  --text_color: #3D2B1F;
+  --text_font: 'Montserrat', sans-serif;
+  --white: #FFFEFE;
+}
+
 body {
-      background-color: var(--bg_color);
-      display: grid;
-      font-family: var(--text_font);
-      gap: 3em;
-  }
+  background-color: var(--bg_color);
+  display: grid;
+  font-family: var(--text_font);
+  gap: 3em;
+}
+
 header {
-      align-items: center;
-      display: flex;
-      justify-content: space-between;
-      padding: 2.6em 6em 2.6em 4em;
-  }
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 2.6em 6em 2.6em 4em;
+}
+
+header .nav {
+  display: flex;
+  justify-content: end;
+  width: 48em;
+  height: 4.5em;
+  gap: 4em;
+  background-color: var(--white);
+  border-radius: 2em;
+  align-items: center;
+}
+.nav img{
+  cursor: pointer;
+}
+ .navbutton{
+  border: none;
+  background-color: var(--button_color);
+  width: 8em;
+  height: 6em;
+  border-radius: 2em;
+  align-items: center;
+  cursor: pointer;
+}
+
 main {
-      align-items: center;
-      display: grid;
-      gap: 12em;
-      justify-content: center;
-  }
+  align-items: center;
+  display: grid;
+  gap: 12em;
+  justify-content: center;
+}
+
 .welcome-message {
-      align-items: center;
-      background-color: var(--pink);
-      border-radius: 3.125em;
-      display: flex;
-      height: 30.5em;
-      justify-content: space-between;
-      padding-inline: 3em;
-      width: 80.8em;
-  }
+  align-items: center;
+  background-color: var(--pink);
+  border-radius: 3.125em;
+  display: flex;
+  height: 30.5em;
+  justify-content: space-between;
+  padding-inline: 3em;
+  width: 80.8em;
+}
+
 .text {
-      display: grid;
-      gap: 4em;
-      text-align: justify;
-      width: 30em;
-  }
+  display: grid;
+  gap: 4em;
+  text-align: justify;
+  width: 30em;
+}
+
 .text h1 {
-      color: var(--text_color);
-      font-size: 2.6em;
-      font-weight: 800;
-  }
+  color: var(--text_color);
+  font-size: 2.6em;
+  font-weight: 800;
+}
+
 .text h3 {
-      color: var(--text_color);
-      font-weight: 600;
-      width: 18em;
-  }
+  color: var(--text_color);
+  font-weight: 600;
+  width: 18em;
+}
+
 .text button {
-      align-items: center;
-      background-color: #FFF7F2;
-      border: none;
-      border-radius: 1em;
-      color: var(--title_color);
-      cursor: pointer;
-      display: flex;
-      font-size: 1em;
-      font-weight: 600;
-      height: 3em;
-      justify-content: space-between;
-      padding-inline: 2em;
-      transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
-      width: 15em;
-  }
+  align-items: center;
+  background-color: #FFF7F2;
+  border: none;
+  border-radius: 1em;
+  color: var(--title_color);
+  cursor: pointer;
+  display: flex;
+  font-size: 1em;
+  font-weight: 600;
+  height: 3em;
+  justify-content: space-between;
+  padding-inline: 2em;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  width: 15em;
+}
+
 .button_message {
-      padding-left: 20em;
-  }
+  padding-left: 20em;
+}
+
 .text button:hover {
-      background-color: var(--button_color);
-      transform: translateY(-0.125em);
-  }
-.cardDecoration{
-      margin-top: -6.6em;
-      position: absolute;
-      z-index: 1;
-  }
+  background-color: var(--button_color);
+  transform: translateY(-0.125em);
+}
+
+.cardDecoration {
+  margin-top: -6.6em;
+  position: absolute;
+  z-index: 1;
+}
+
 .card {
-      align-items: center;
-      background-color: var(--card_bg);
-      border-radius: 1em;
-      display: flex;
-      gap: 2em;
-      height: 33.5em;
-      justify-content: center;
-      position: relative;
-      width: 80.3em;
-  }
-  .card img{
-    border-radius: 2em;
-    max-width: 476px;
-  }
-.card_content{
-      background-color: var(--pink);
-      border-radius: 1em;
-      display: grid;
-      gap: 4em;
-      height:  30.25em;
-      padding-inline: 4em;
-      padding-top: 4em;
-      width: 45.1875em;
-  }
-.card_content h4{
-      color: var(--text_color);
-      font-size: 1.5em;
-      font-weight: 400;
-      width: 20em;
-  }
-.card_reaction{
-      align-items: center;
-      display: flex;
-      justify-content: space-between;
-  }
-.card_reaction button{
-      align-items: center;
-      background-color: #FFF7F2;
-      border: none;
-      border-radius: 1em;
-      color: var(--title_color);
-      cursor: pointer;
-      display: flex;
-      font-size: 1em;
-      font-weight: 600;
-      height: 3em;
-      justify-content: space-between;
-      padding-inline: 2em;
-      transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
-      width: 15em;
-  }
-.card_reaction button:hover{
-      background-color: var(--button_color);
-      transform: translateY(-0.125em);
-  }
+  align-items: center;
+  background-color: var(--card_bg);
+  border-radius: 1em;
+  display: flex;
+  gap: 2em;
+  height: 33.5em;
+  justify-content: center;
+  position: relative;
+  width: 80.3em;
+}
+
+.card img {
+  border-radius: 2em;
+  max-width: 476px;
+}
+
+.card_content {
+  background-color: var(--pink);
+  border-radius: 1em;
+  display: grid;
+  gap: 4em;
+  height: 30.25em;
+  padding-inline: 4em;
+  padding-top: 4em;
+  width: 45.1875em;
+}
+
+.card_content h4 {
+  color: var(--text_color);
+  font-size: 1.5em;
+  font-weight: 400;
+  width: 20em;
+}
+
+.card_reaction {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card_reaction button {
+  align-items: center;
+  background-color: #FFF7F2;
+  border: none;
+  border-radius: 1em;
+  color: var(--title_color);
+  cursor: pointer;
+  display: flex;
+  font-size: 1em;
+  font-weight: 600;
+  height: 3em;
+  justify-content: space-between;
+  padding-inline: 2em;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  width: 15em;
+}
+
+.card_reaction button:hover {
+  background-color: var(--button_color);
+  transform: translateY(-0.125em);
+}
+
 a {
-       color: inherit;
-   } 
+  color: inherit;
+}
+.displaynone{
+  display: none;
+}
+
+.displayappear{
+  display: block;
+}
