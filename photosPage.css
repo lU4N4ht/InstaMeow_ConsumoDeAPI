@@ -134,9 +134,13 @@ main {
   width: 80.3em;
 }
 
-.card img {
+.card .imagem-animal {
   border-radius: 2em;
-  max-width: 476px;
+  width: 476px;
+  height: 476px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .card_content {
@@ -194,4 +198,10 @@ a {
 
 .displayappear{
   display: block;
+}
+
+.card_container{
+  display: flex;
+  flex-direction: column;
+  gap: 15vh;
 }
