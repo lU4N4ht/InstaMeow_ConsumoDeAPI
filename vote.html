@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/jpg" href="https://cdn-icons-png.flaticon.com/512/57/57162.png" />
+  <link rel="stylesheet" href="vote.css">
+  <script src="vote.js" defer></script>
+  <title>Vote</title>
+</head>
+
+<body>
+  <header>
+    <img src="./img/logo.png" alt="logo" width="300">
+    <nav class="nav">
+        <a href="#">HOME</a>
+        <a href="./vote.html">VOTE</a>
+        <a href="#">FACTS</a>
+        <a href="#">GIFS</a>
+        <a href="./picture.html">PICTURES</a>
+        <div class="animation start-home"></div>
+    </nav>
+</header>
+<main>
+  <section id="voting-options" class="voting-options">
+    <div class="vote">
+      <button onClick="vote(1)">UpVote</button>
+      <button onClick="vote(-1)">DownVote</button>
+    </div>
+    <div class="image-container">
+      <img id="image-to-vote" class="image">
+    </div>
+    <button onClick="showHistoricVotes()">History</button>
+  </section>
+  <section class="voting-history">
+    <button onClick="showVoteOptions()">Show Vote Options</button>
+    <div id="grid" class="imgrid"></div>
+  </section>
+
+  <div id="vote-options" class="vote-options">
+    <button onClick="vote(1)">Vote Up </button>
+    <button onClick="vote(-1)">Vote Down </button>
+    <button onClick="showHistoricVotes()">History </button>
+    <div>
+      <img id="image-to-vote-on" class="col-lg"></img>
+      </div>
+      
+  
+    
+    </div>
+  
+    <div id="vote-results"  class="vote-results">
+    <button onClick="showVoteOptions()">Show Vote Options</button>
+      <div id="grid" class="imgrid"></div>
+    </div>
+</main>
+
+
+</body>
+
+</html>

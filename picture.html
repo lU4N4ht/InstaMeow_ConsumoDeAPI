@@ -10,25 +10,23 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,600;1,800&family=Mooli&display=swap"
         rel="stylesheet">
     <link rel="icon" type="image/jpg" href="https://cdn-icons-png.flaticon.com/512/57/57162.png" />
-    <link rel="stylesheet" href="photosPage.css">
-    <script src="./photos_page.js" defer></script>
+    <link rel="stylesheet" href="picture.css">
+    <script src="./picture.js" defer></script>
     <title>InstaMeow</title>
 </head>
 
 <body>
     <header>
         <img src="./img/logo.png" alt="logo" width="300">
-
-      <div class="nav">
-        <img src="./img/icon_gifPage.png" alt="" class="gifs">
-        <img src="./img/icon_memePage.png" alt="" class="memes">
-        <img src="./img/icon_factPage.png" alt="" class="facts">
-        <img src="./img/icon_homePage.png" alt="" class="home">
-        <img src="./img/icon_photosPage.png" alt="" class="photos">
-        <button class="navbutton">
-            <img src="./img/menu.png" alt="menu" class="menu" width="60px">
-        </button>
-      </div>  
+        <nav class="nav">
+            <a href="#">HOME</a>
+            <a href="./vote.html">VOTE</a>
+            <a href="#">FACTS</a>
+            <a href="#">GIFS</a>
+            <a href="./picture.html">PICTURES</a>
+            <div class="animation start-home"></div>
+        </nav>
+        
     </header>
     <main>
         <section class="welcome-message">
@@ -49,7 +47,10 @@
                 <img src="./img/message-image.png" alt="message-image">
             </div>
         </section>
-        <div class="card_container" id="card_container"></div>
+        <section class="pics">
+            <div class="card_container" id="card_container"></div>
+        </section>
     </main>
 </body>
+
 </html>

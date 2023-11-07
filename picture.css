@@ -5,6 +5,16 @@
   text-decoration: none;
 }
 
+a {
+  text-decoration: none;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
 :root {
   --bg_color: #FFF7F2;
   --button_color: #F8BCA3;
@@ -21,6 +31,7 @@ body {
   display: grid;
   font-family: var(--text_font);
   gap: 3em;
+  padding-bottom: 6em;
 }
 
 header {
@@ -28,29 +39,96 @@ header {
   display: flex;
   justify-content: space-between;
   padding: 2.6em 6em 2.6em 4em;
+  background-color: var(--light_pink);
+  border-bottom: 0.5px solid var(--card_bg);
 }
 
-header .nav {
+nav {
+  position: relative;
+  margin: 27px auto 0;
+  width: 46em;
+  height: 4em;
+  background-color: var(--bg_color);
+  border-radius: 0.5em;
   display: flex;
-  justify-content: end;
-  width: 48em;
-  height: 4.5em;
-  gap: 4em;
-  background-color: var(--white);
-  border-radius: 2em;
+  justify-content: center;
+  gap: 2em;
   align-items: center;
+
 }
-.nav img{
+
+nav a {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  font-size: 1.3em;
+  color: var(--text_color);
   cursor: pointer;
 }
- .navbutton{
-  border: none;
-  background-color: var(--button_color);
-  width: 8em;
-  height: 6em;
-  border-radius: 2em;
-  align-items: center;
-  cursor: pointer;
+
+nav .animation {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  z-index: 0;
+  transition: all .5s ease 0s;
+  border-radius: 0.5em;
+}
+
+a:nth-child(1) {
+  width: 100px;
+}
+
+a:nth-child(2) {
+  width: 110px;
+}
+
+a:nth-child(3) {
+  width: 100px;
+}
+
+a:nth-child(4) {
+  width: 120px;
+}
+
+a:nth-child(5) {
+  width: 165px;
+}
+
+nav .start-home,
+a:nth-child(1):hover~.animation {
+  width: 110px;
+  left: 0;
+  background-color: var(--card_bg);
+}
+
+nav .start-about,
+a:nth-child(2):hover~.animation {
+  width: 110px;
+  left: 140px;
+  background-color: var(--card_bg);
+}
+
+nav .start-blog,
+a:nth-child(3):hover~.animation {
+  width: 110px;
+  left: 270px;
+  background-color: var(--card_bg);
+}
+
+nav .start-portefolio,
+a:nth-child(4):hover~.animation {
+  width: 110px;
+  left: 420px;
+  background-color: var(--card_bg);
+}
+
+nav .start-contact,
+a:nth-child(5):hover~.animation {
+  width: 170px;
+  left: 570px;
+  background-color: var(--card_bg);
 }
 
 main {
@@ -74,7 +152,6 @@ main {
 .text {
   display: grid;
   gap: 4em;
-  text-align: justify;
   width: 30em;
 }
 
@@ -88,6 +165,7 @@ main {
   color: var(--text_color);
   font-weight: 600;
   width: 18em;
+  text-align: justify;
 }
 
 .text button {
@@ -131,7 +209,7 @@ main {
   height: 33.5em;
   justify-content: center;
   position: relative;
-  width: 80.3em;
+  width: 35.3em;
 }
 
 .card .imagem-animal {
@@ -142,65 +220,23 @@ main {
   background-repeat: no-repeat;
   background-position: center;
 }
-
-.card_content {
-  background-color: var(--pink);
-  border-radius: 1em;
-  display: grid;
-  gap: 4em;
-  height: 30.25em;
-  padding-inline: 4em;
-  padding-top: 4em;
-  width: 45.1875em;
-}
-
-.card_content h4 {
-  color: var(--text_color);
-  font-size: 1.5em;
-  font-weight: 400;
-  width: 20em;
-}
-
-.card_reaction {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-}
-
-.card_reaction button {
-  align-items: center;
-  background-color: #FFF7F2;
-  border: none;
-  border-radius: 1em;
-  color: var(--title_color);
-  cursor: pointer;
-  display: flex;
-  font-size: 1em;
-  font-weight: 600;
-  height: 3em;
-  justify-content: space-between;
-  padding-inline: 2em;
-  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
-  width: 15em;
-}
-
-.card_reaction button:hover {
-  background-color: var(--button_color);
-  transform: translateY(-0.125em);
-}
-
 a {
   color: inherit;
 }
-.displaynone{
+
+.displaynone {
   display: none;
 }
 
-.displayappear{
+.displayappear {
   display: block;
 }
 
-.card_container{
+.pics{
+  display: grid;
+  justify-content: center;
+}
+.card_container {
   display: flex;
   flex-direction: column;
   gap: 15vh;
