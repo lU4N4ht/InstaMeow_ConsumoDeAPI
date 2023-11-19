@@ -14,48 +14,34 @@
   <header>
     <img src="./img/logo.png" alt="logo" width="300">
     <nav class="nav">
-        <a href="#">HOME</a>
-        <a href="./vote.html">VOTE</a>
-        <a href="#">FACTS</a>
-        <a href="#">GIFS</a>
-        <a href="./picture.html">PICTURES</a>
-        <div class="animation start-home"></div>
+      <a href="#">HOME</a>
+      <a href="./vote.html">VOTE</a>
+      <a href="#">FACTS</a>
+      <a href="#">GIFS</a>
+      <a href="./picture.html">PICTURES</a>
+      <div class="animation start-home"></div>
     </nav>
-</header>
-<main>
-  <section id="voting-options" class="voting-options">
-    <div class="vote">
-      <button onClick="vote(1)">UpVote</button>
-      <button onClick="vote(-1)">DownVote</button>
-    </div>
-    <div class="image-container">
-      <img id="image-to-vote" class="image">
-    </div>
-    <button onClick="showHistoricVotes()">History</button>
-  </section>
-  <section class="voting-history">
-    <button onClick="showVoteOptions()">Show Vote Options</button>
-    <div id="grid" class="imgrid"></div>
-  </section>
-
-  <div id="vote-options" class="vote-options">
-    <button onClick="vote(1)">Vote Up </button>
-    <button onClick="vote(-1)">Vote Down </button>
-    <button onClick="showHistoricVotes()">History </button>
-    <div>
-      <img id="image-to-vote-on" class="col-lg"></img>
+  </header>
+  <main>
+    <div id="vote" class="vote">
+      <div class="options" id="options">
+        <button onClick="vote(1)">UpVote</button>
+        <button onClick="vote(-1)">DownVote</button>
       </div>
-      
-  
-    
+      <div class="image-container">
+        <img id="image-to-vote" class="image">
+      </div>
+      <div class="button-container">
+        <button onClick="showHistoricVotes()">History</button>
+      </div>
     </div>
-  
-    <div id="vote-results"  class="vote-results">
-    <button onClick="showVoteOptions()">Show Vote Options</button>
-      <div id="grid" class="imgrid"></div>
+    <div class="history" id="history">
+      <div class="button-container">
+      <button onClick="showVoteOptions()">Show Vote Options</button>
+      </div>
+      <div id="borda" class="images-container"></div>
     </div>
-</main>
-
+  </main>
 
 </body>
 

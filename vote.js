@@ -3,11 +3,10 @@ const API_KEY = "DEMO-API-KEY";
 
 let currentImageToVoteOn;
 
-function showHistoricVotes()
-{
+function showHistoricVotes() {
   
-  document.getElementById('vote-options').style.display = 'none';
-  document.getElementById('vote-results').style.display = 'block';
+  document.getElementById('vote').style.display = 'none';
+  document.getElementById('history').style.display = 'grid';
 
   const url = `${API_URL}votes?limit=10&order=DESC`;
 
@@ -19,28 +18,26 @@ function showHistoricVotes()
   })
   .then((data) => {
   
-    data.map(function(voteData) {
- 
-    const imageData = voteData.image
- 
-    let image = document.createElement('img');
-     //use the url from the image object
-     image.src = imageData.url
-            
-    let gridCell = document.createElement('div');
+    data.map(function(voteImagem) {
+    const imageData = voteImagem.image
+    const image = document.createElement('img');
+     image.src = imageData.url 
+     image.classList.add('image')       
+    const bordaImagem = document.createElement('div');
     
-      if(voteData.value<0)
+      if(voteImagem.value<0)
       {
-        gridCell.classList.add('red') 
+        bordaImagem.classList.add('red') 
+
       } else {
-        gridCell.classList.add('green')
+        bordaImagem.classList.add('green')
       }
       
-    gridCell.classList.add('col-lg');
+    bordaImagem.classList.add('imgborda');
 
-    gridCell.appendChild(image)
+    bordaImagem.appendChild(image)
        
-    document.getElementById('grid').appendChild(gridCell);
+    document.getElementById('borda').appendChild(bordaImagem);
        
     });
   
@@ -51,18 +48,17 @@ function showHistoricVotes()
   
 }
 
-function showVoteOptions()
-{
-  document.getElementById("grid").innerHTML = '';
+function showVoteOptions() {
+  document.getElementById("borda").innerHTML = '';
   
-  document.getElementById('vote-options').style.display = 'block';
-  document.getElementById('vote-results').style.display = 'none';
+  document.getElementById('vote').style.display = 'grid';
+  document.getElementById('history').style.display = 'none';
   
   showImageToVoteOn()
+
 }
 
-function showImageToVoteOn()
-{
+function showImageToVoteOn() {
   
   const url = `${API_URL}images/search`;
 
@@ -74,7 +70,7 @@ function showImageToVoteOn()
   })
   .then((data) => {
     currentImageToVoteOn = data[0];
-    document.getElementById("image-to-vote-on").src= currentImageToVoteOn.url;
+    document.getElementById("image-to-vote").src= currentImageToVoteOn.url;
   });
 
 }
